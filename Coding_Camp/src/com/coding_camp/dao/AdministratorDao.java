@@ -1,27 +1,35 @@
 package com.coding_camp.dao;
 
-import com.coding_camp.exceptions.StudentException;
+import com.coding_camp.exceptions.AdminException;
 import com.coding_camp.model.Administrator;
 
 public interface AdministratorDao {
 	
-	public String registerAdmin(Administrator adminstartor) throws StudentException;
+	public String registerAdmin(Administrator adminstartor) throws AdminException;
 	
-	public String changeAdminFirstName(String firstName) throws StudentException;
+	public String changeAdminFirstName(String firstName, int adminCode) throws AdminException;
 
-	public String changeAdminLastName(String lastName) throws StudentException;
+	public String changeAdminLastName(String lastName, int adminCode) throws AdminException;
 	
-	public String changeAdminFatherName(String fatherName) throws StudentException;
+	public String changeAdminFatherName(String fatherName, int adminCode) throws AdminException;
 	
-	public String changeAdminMotherName(String motherName) throws StudentException;
+	public String changeAdminMotherName(String motherName, int adminCode) throws AdminException;
 	
-	public String changeAdminGender(String gender) throws StudentException;
+	public String changeAdminGender(String gender, int adminCode) throws AdminException;
 	
-	public String changeAdminDateOfBirth(String dateOfBirth) throws StudentException;
+	public String changeAdminDateOfBirth(String dateOfBirth, int adminCode) throws AdminException;
 	
-	public String changeAdminPassword(String password) throws StudentException;
+	public String getAdminPassword(int adminCode) throws AdminException;
 	
-	public String changeAdminAddress(String address) throws StudentException;
+	public String changeAdminPassword(String password, int adminCode) throws AdminException;
 	
-	public String changeAdminContactNo(String contactNo) throws StudentException;
+	public String changeAdminAddress(String address, int adminCode) throws AdminException;
+	
+	public String changeAdminContactNo(String contactNo, int adminCode) throws AdminException;
+	
+	public int AdminLogIn(String email, String password) throws AdminException;
+	
+	public String getAdminFirstName(int studentCode) throws AdminException;
+	
+	public Administrator showAdminDetails(int adminCode) throws AdminException;
 }
