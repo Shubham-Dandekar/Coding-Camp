@@ -1,7 +1,7 @@
 package com.coding_camp.model;
 
 public class Administrator {
-	private int adminNo;
+	private int adminCode;
 	private String firstName;
 	private String lastName;
 	private String fatherName;
@@ -9,14 +9,20 @@ public class Administrator {
 	private String gender;
 	private String dateOfBirth;
 	private String address;
-	private int contactNo;
+	private String contactNo;
 	private String email;
 	private String password;
 	
-	public Administrator(int adminNo, String firstName, String lastName, String fatherName, String motherName, String gender,
-			String dateOfBirth, String address, int contactNo, String email, String password) {
+	
+	
+	public Administrator() {
 		super();
-		this.adminNo = adminNo;
+	}
+
+	public Administrator(int adminCode, String firstName, String lastName, String fatherName, String motherName, String gender,
+			String dateOfBirth, String address, String contactNo, String email, String password) {
+		super();
+		this.adminCode = adminCode;
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.fatherName = fatherName;
@@ -29,12 +35,12 @@ public class Administrator {
 		this.password = password;
 	}
 
-	public int getRoll() {
-		return adminNo;
+	public int getAdminCode() {
+		return adminCode;
 	}
 
-	public void setRoll(int roll) {
-		this.adminNo = roll;
+	public void setAdminCode(int adminCode) {
+		this.adminCode = adminCode;
 	}
 
 	public String getFirstName() {
@@ -93,11 +99,11 @@ public class Administrator {
 		this.address = address;
 	}
 
-	public int getContactNo() {
+	public String getContactNo() {
 		return contactNo;
 	}
 
-	public void setContactNo(int contactNo) {
+	public void setContactNo(String contactNo) {
 		this.contactNo = contactNo;
 	}
 
@@ -119,10 +125,9 @@ public class Administrator {
 
 	@Override
 	public String toString() {
-		return "Student [adminNo=" + adminNo + ", firstName=" + firstName + ", lastName=" + lastName + ", fatherName="
-				+ fatherName + ", motherName=" + motherName + ", gender=" + gender + ", dateOfBirth=" + dateOfBirth
-				+ ", address=" + address + ", contactNo=" + contactNo + ", email=" + email + ", password=" + password
-				+ "]";
+		return "Administrator [adminCode=" + adminCode + ", firstName=" + firstName + ", lastName=" + lastName
+				+ ", fatherName=" + fatherName + ", motherName=" + motherName + ", gender=" + gender + ", dateOfBirth="
+				+ dateOfBirth + ", address=" + address + ", contactNo=" + contactNo + ", email=" + email + ", password="
+				+ password + "]";
 	}
-	
 }

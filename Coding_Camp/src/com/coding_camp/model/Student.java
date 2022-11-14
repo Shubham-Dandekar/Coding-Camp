@@ -1,7 +1,7 @@
 package com.coding_camp.model;
 
 public class Student {
-	private int rollNo;
+	private int studentCode;
 	private String firstName;
 	private String lastName;
 	private String fatherName;
@@ -9,14 +9,14 @@ public class Student {
 	private String gender;
 	private String dateOfBirth;
 	private String address;
-	private int contactNo;
+	private String contactNo;
 	private String email;
 	private String password;
 	
-	public Student(int rollNo, String firstName, String lastName, String fatherName, String motherName, String gender,
-			String dateOfBirth, String address, int contactNo, String email, String password) {
+	public Student(int studentCode, String firstName, String lastName, String fatherName, String motherName, String gender,
+			String dateOfBirth, String address, String contactNo, String email, String password) {
 		super();
-		this.rollNo = rollNo;
+		this.studentCode = studentCode;
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.fatherName = fatherName;
@@ -29,12 +29,27 @@ public class Student {
 		this.password = password;
 	}
 
-	public int getRoll() {
-		return rollNo;
+	public Student(String firstName, String lastName, String fatherName, String motherName, String gender,
+			String dateOfBirth, String address, String contactNo, String email, String password) {
+		super();
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.fatherName = fatherName;
+		this.motherName = motherName;
+		this.gender = gender;
+		this.dateOfBirth = dateOfBirth;
+		this.address = address;
+		this.contactNo = contactNo;
+		this.email = email;
+		this.password = password;
 	}
 
-	public void setRoll(int roll) {
-		this.rollNo = roll;
+	public int getStudentCode() {
+		return studentCode;
+	}
+
+	public void setStudentCode(int studentCode) {
+		this.studentCode = studentCode;
 	}
 
 	public String getFirstName() {
@@ -93,11 +108,11 @@ public class Student {
 		this.address = address;
 	}
 
-	public int getContactNo() {
+	public String getContactNo() {
 		return contactNo;
 	}
 
-	public void setContactNo(int contactNo) {
+	public void setContactNo(String contactNo) {
 		this.contactNo = contactNo;
 	}
 
@@ -119,10 +134,9 @@ public class Student {
 
 	@Override
 	public String toString() {
-		return "Student [rollNo=" + rollNo + ", firstName=" + firstName + ", lastName=" + lastName + ", fatherName="
-				+ fatherName + ", motherName=" + motherName + ", gender=" + gender + ", dateOfBirth=" + dateOfBirth
-				+ ", address=" + address + ", contactNo=" + contactNo + ", email=" + email + ", password=" + password
-				+ "]";
-	}
-	
+		return "Student [studentCode=" + studentCode + ", firstName=" + firstName + ", lastName=" + lastName
+				+ ", fatherName=" + fatherName + ", motherName=" + motherName + ", gender=" + gender + ", dateOfBirth="
+				+ dateOfBirth + ", address=" + address + ", contactNo=" + contactNo + ", email=" + email + ", password="
+				+ password + "]";
+	}	
 }

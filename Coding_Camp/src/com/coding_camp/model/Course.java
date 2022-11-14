@@ -6,6 +6,13 @@ public class Course {
 	private int fee;
 	private String duration;
 	
+	public Course(String name, int fee, String duration) {
+		super();
+		this.name = name;
+		this.fee = fee;
+		this.duration = duration;
+	}
+
 	public Course(int id, String name, int fee, String duration) {
 		super();
 		this.id = id;
